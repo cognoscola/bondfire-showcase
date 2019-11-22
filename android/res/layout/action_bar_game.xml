@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bondfire.app.android.view.ActionBarGameView
+    android:id="@+id/action_bar_icons"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="invisible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_ActionBarGame"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+      <!--  <ImageButton
+            android:id="@+id/action1"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="56.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/icon_game_selected"
+            android:contentDescription="@string/icon"/>-->
+
+        <ImageButton
+            android:id="@+id/ib_gamesettings"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="@dimen/fragment_left_space"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/bf_menu_overflow" />
+
+     <!--   <ImageButton
+            android:id="@+id/iv_resume_game"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="@dimen/fragment_left_space"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/bfA_menu_overflow" />-->
+
+        <ImageView
+            android:id="@+id/ib_achievements"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="@dimen/fragment_left_space"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/achievements"
+            android:src="@drawable/games_achievements_white" />
+
+        <ImageView
+            android:id="@+id/ib_matches"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="@dimen/fragment_left_space"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/achievements"
+            android:src="@drawable/games_matches_white" />
+
+        <LinearLayout
+            android:id="@+id/ll_gameActionbarsection"
+            android:orientation="horizontal"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+   <!--     <View
+             android:layout_width="0.0dip"
+             android:layout_height="fill_parent"
+             android:layout_weight="1.0" />-->
+
+
+        <!--   android:src="@drawable/ic_menu_overflow" /> -->
+
+    </LinearLayout>
+
+</com.bondfire.app.android.view.ActionBarGameView>

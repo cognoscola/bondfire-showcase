@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/action_bar_height"
+    android:paddingBottom="@dimen/action_bar_height"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/yo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <com.andexert.library.RippleView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b_real_time_participants"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                >
+
+                <ImageView
+                    android:id="@+id/participantsAlert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="5dip"
+                    android:paddingLeft="5dip"
+                    android:src="@drawable/bf_alert_icon"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/participantImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bf_group_icon"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+            </FrameLayout>
+
+        </com.andexert.library.RippleView>
+
+        <View
+
+            android:background="#33ffffff"
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginBottom="8.0dip" />
+
+        <com.andexert.library.RippleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b_real_time_messages"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <ImageView
+                    android:id="@+id/messagesAlert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="5dip"
+                    android:paddingLeft="5dip"
+                    android:src="@drawable/bf_alert_icon"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/chatImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bf_messages_icon"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+            </FrameLayout>
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/yo">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_room_title"
+                android:text="@string/b_current_participants"
+                android:textColor="@color/pure_white"
+                android:textSize="@dimen/standard_text_size"
+                android:layout_weight="7"
+             />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_win_title"
+
+                android:textColor="@color/pure_white"
+                android:textSize="@dimen/standard_text_size"
+                android:layout_weight="3"
+
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/pure_white"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/lv_room_participants"
+        android:layout_below="@+id/title"
+        android:dividerHeight="1dp"
+        android:divider="@color/pure_white"
+        android:clickable="true">
+    </ListView>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/lv_chats"
+        android:layout_below="@+id/title"
+        android:dividerHeight="5dp"
+        android:divider="#00000000"
+        />
+
+</RelativeLayout>

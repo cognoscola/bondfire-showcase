@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bondfire.app.android.view.ActionBarProfileView
+    android:id="@+id/action_bar_icons"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="invisible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageButton
+            android:id="@+id/ib_profilesettings"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="@dimen/fragment_left_space"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/bf_menu_overflow"  />
+
+        <View
+            android:layout_width="0.dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            />
+
+        <ImageButton
+            android:id="@+id/ib_search"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="@dimen/fragment_left_space"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/icon"
+            android:src="@android:drawable/ic_menu_search"  />
+
+        <!--   android:src="@drawable/ic_menu_overflow" /> -->
+
+    </LinearLayout>
+</com.bondfire.app.android.view.ActionBarProfileView>

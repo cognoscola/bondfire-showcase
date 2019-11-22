@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background"
+    >
+    <com.bondfire.app.android.background.BackgroundGradientView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:padding="5dp"
+        android:id="@+id/fl_game_title"
+        android:layout_width="@dimen/dialog_title_view_width"
+        android:layout_height="@dimen/dialog_title_view_height"
+        >
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_title_license"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/dialog_title_size"
+            android:singleLine="true"
+            />
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/textColorWhite"
+        android:layout_below="@+id/fl_game_title"
+        android:id="@+id/space_1"
+        />
+
+    <ScrollView
+        android:layout_below="@+id/space_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_requirements"
+        android:scrollbars="none"
+        android:layout_above="@+id/b_close">
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ripple_licence_heading"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dialog_credit_heading"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ripple_license_text"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dialog_credit_standard"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/blur_license_heading"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dialog_credit_heading"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/blur_license_text"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dialog_credit_standard"
+            android:layout_weight="1"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/google_code_license_heading"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dialog_credit_heading"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/google_code_license_text"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dialog_credit_standard"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/en_library_heading"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dialog_credit_heading"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dialog_credit_padding"
+            android:paddingStart="@dimen/dialog_credit_padding"
+            android:paddingEnd="@dimen/dialog_credit_padding"
+            android:paddingRight="@dimen/dialog_credit_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/en_library_text"
+            android:textColor="@drawable/textColorWhite"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dialog_credit_standard"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_credit_space"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/space_3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/textColorWhite"
+        android:layout_below="@+id/ll_requirements" />
+
+    <LinearLayout
+        android:id="@+id/b_close"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <FrameLayout
+            android:layout_width="0.0dp"
+            android:layout_height="@dimen/action_bar_height"
+            android:background="@drawable/tab_button"
+
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_close"
+                android:textColor="@drawable/textColorWhite"
+                android:layout_gravity="center"
+                android:textSize="@dimen/dialog_standard_size"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

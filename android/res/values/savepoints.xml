@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="save_points">
+        <item>Very Beginning</item>
+        <item>Wind Activity</item>
+        <item>Going Fast</item>
+        <item>Fast w/ Wind</item>
+        <item>Super Slow</item>
+        <item>Slow wind</item>
+        <item>The Long stretch</item>
+        <item>Eye of the Needle</item>
+    </string-array>
+</resources>
+

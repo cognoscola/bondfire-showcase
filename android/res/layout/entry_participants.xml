@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="48dip"
+    android:weightSum="100"
+    android:focusable="false"
+
+    >
+
+<!--    <ImageView
+        android:layout_width="56dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_profilepic"/>-->
+
+    <LinearLayout
+        android:layout_width="0.0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="65"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Entry"
+            android:textColor="@color/pure_white"
+            android:textSize="20sp"
+            android:id="@+id/tv_name"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:padding="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="status"
+            android:textSize="13sp"
+            android:textColor="@color/pure_white"
+            android:id="@+id/tv_room_status"
+
+            android:textStyle="italic"
+            />
+
+     <!--   <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Played:"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"/>-->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0.0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_participant_score"
+        android:layout_weight="25"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/pure_white"
+       />
+
+    <!--<View
+        android:layout_width="0.0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="25"/>-->
+
+    <ImageView
+        android:layout_width="0.0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:src="@drawable/bf_menu_overflow"
+        android:background="@drawable/tab_button"
+        android:id="@+id/b_overflow_participant"/>
+
+
+    <!---->
+   <!-- <ImageView
+        android:id="@+id/ib_invite_to_party"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bf_game_icon"
+        android:background="@drawable/tab_button"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>-->
+
+
+</LinearLayout>

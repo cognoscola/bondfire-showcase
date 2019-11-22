@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:descendantFocusability="blocksDescendants" >
+
+    <FrameLayout
+        android:layout_width="58dip"
+        android:layout_height="match_parent">
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_profilepic"
+            android:layout_gravity="center"/>
+
+     </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Text ListView"
+            android:layout_weight="2"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            android:id="@+id/tv_party_username"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="HP bar "
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_indicator_button"
+        android:layout_width="58dip"
+        android:layout_height="match_parent"
+        android:background="@drawable/tab_button"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+        <ImageView
+            android:id="@+id/iv_indicator"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bf_game_icon"
+          />
+
+
+    </FrameLayout>
+
+
+<!--
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            android:gravity="center"
+            android:layout_gravity="center" />
+    </FrameLayout>-->
+
+
+</LinearLayout>

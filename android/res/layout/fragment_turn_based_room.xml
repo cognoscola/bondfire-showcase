@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/action_bar_height"
+    android:paddingBottom="@dimen/action_bar_height"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/yo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        >
+        <Button
+            android:id="@+id/b_switch_matches"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/b_leave"
+            android:layout_weight="1"
+            android:background="@drawable/back"
+            android:textColor="@color/pure_white"/>
+
+        <Button
+            android:id="@+id/b_leave_room"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/b_forfeit"
+            android:layout_weight="1"
+            android:background="@drawable/back"
+            android:textColor="@color/pure_white"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/yo">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:text="@string/b_current_participants"
+            android:textColor="@color/pure_white"
+            android:textSize="@dimen/standard_text_size"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/pure_white"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/lv_turn_room_participants"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/b_onLeave"
+        android:dividerHeight="1dp"
+        android:divider="@color/pure_white">
+    </ListView>
+
+</RelativeLayout>

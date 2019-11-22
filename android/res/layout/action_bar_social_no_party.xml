@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bondfire.app.android.view.ActionBarSocialView
+    android:id="@+id/chat_controls"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="invisible"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageButton
+            android:id="@+id/ib_socialsettings"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="@dimen/fragment_left_space"
+            android:layout_height="fill_parent"
+            android:src="@drawable/bf_menu_overflow"
+            android:contentDescription="@string/icon"/>
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            style="?android:attr/progressBarStyle"
+            android:layout_weight="1.0"
+            android:visibility="gone"
+            />
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:visibility="gone"
+            android:textColor="@color/pure_white"
+            android:hint="@string/et_hint"
+            android:textColorHint="#33FFFFFF"
+            />
+        <ImageButton
+            android:id="@+id/ib_send"
+            android:background="@drawable/action_bar_background"
+            android:layout_width="56.0dip"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/ic_action_send_now"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+</com.bondfire.app.android.view.ActionBarSocialView>

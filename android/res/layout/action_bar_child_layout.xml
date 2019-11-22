@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bondfire.app.android.view.ActionBarChildView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/action_bar_icons"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/b_child_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_icon"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/child_action_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/text_shadow_white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</com.bondfire.app.android.view.ActionBarChildView>
+

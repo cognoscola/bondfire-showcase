@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="hspace" format="dimension" />
+        <attr name="vspace" format="dimension" />
+
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_Layout">
+        <attr name="layout_space" format="dimension"/>
+    </declare-styleable>
+
+    <attr name="direction" format="integer" />
+
+
+    <declare-styleable name="FixedAspectRatioFrameLayout">
+        <attr name="aspectRatioWidth" format="integer" >2</attr>
+        <attr name="aspectRatioHeight" format="integer">3</attr>
+    </declare-styleable>
+
+
+</resources>

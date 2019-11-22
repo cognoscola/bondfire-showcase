@@ -1,0 +1,83 @@
+{
+com.badlogic.gdx.graphics.Color: {
+	green: { g: 1, a: 1 },
+	light_grey: { r: 0.8, g: 0.8, b: 0.8, a: 1 },
+	white: { r: 1, g: 1, b: 1, a: 1 },
+	red: { r: 1, a: 1 },
+	black: { a: 1 },
+	grey: { r: 0.7, g: 0.7, b: 0.7, a: 1 }
+},
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	default-font: { file: default.fnt }
+},
+
+
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: default-font,
+		fontColor: { a: 1, b: 1, g: 1, r: 1 },
+		disabledFontColor: { a: 1, b: 0.8, g: 0.8, r: 0.8 },
+		up: default-round,
+		down: default-round-down
+	},
+	titleButtons: { font: default-font, down: default-round-down },
+	toggle: {
+		font: default-font,
+		fontColor: { a: 1, b: 1, g: 1, r: 1 },
+		downFontColor: { a: 1, r: 1 },
+		up: default-round,
+		down: default-round-down,
+		checked: default-round-down
+	}
+},
+com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle: {
+	leaveButton: { imageUp: leave, imageDown: leave },
+	submitButton: { imageUp: submit2, imageDown: submit2 },
+	saveButton: { imageUp: save2, imageDown: save2 },
+	paintButton: { imageUp: color2, imageDown: color2 },
+	colorButton: { imageUp: pallette, imageDown: pallette },
+	undoButton: { imageUp: backward2, imageDown: backward2 },
+	clearButton: { imageUp: clear2, imageDown: clear2 }
+},
+
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: { up: default-round, down: default-round-down },
+	toggle: { up: default-round, down: default-round-down, checked: default-round-down }
+},
+
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		font: default-font,
+		fontColor: { a: 1, b: 1, g: 1, r: 1 },
+		background: textfield,
+		cursor: cursor,
+		selection: selection
+	}
+},
+
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	optional: {
+		font: default-font,
+		fontColor: { a: 1, b: 0.7, g: 0.7, r: 0.7 }
+	},
+	default: {
+		font: default-font,
+		fontColor: { a: 1, b: 1, g: 1, r: 1 }
+	},
+	error: {
+		font: default-font,
+		fontColor: { a: 1, r: 1 }
+	},
+	title: {
+		font: default-font,
+		fontColor: { a: 1, b: 0.8, g: 0.8, r: 0.8 }
+	}
+},
+
+
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+	default-vertical: { background: default-slider, knob: default-slider-knob },
+	default-horizontal: { background: default-slider, knob: default-slider-knob }
+}
+
+}

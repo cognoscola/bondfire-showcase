@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="address_policy">"http://www.bondfire.ca/privacy-policy"</string>
+    <string name="address_tos">"http://www.bondfire.ca/tos"</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_leave">Leave Party</string>
+    <string name="action_make_host">Make Game Host</string>
+    <string name="action_invite_to_game">Invite to game</string>
+    <string name="action_invite_everyone">Invite Everyone</string>
+    <string name="action_join_game">Join Game</string>
+
+    <string name="app_name">Bondfire</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <!-- Validation -->
+    <string name="username_error">Username cannot be empty</string>
+    <string name="password_error">Password cannot be empty</string>
+    <string name="length_error">Name must be longer than 2 characters</string>
+
+    <!-- Login screen -->
+    <string name="Create_New_Account">CREATE A NEW ACCOUNT</string>
+
+    <!-- Overflow Menu -->
+    <string name="action_reconnect">Refresh Connection</string>
+    <string name="action_logout">Sign out</string>
+    <string name="bt_service_option">Bluetooth Discoverable</string>
+    <string name="nsd_service_option">Network Discoverable</string>
+
+    <string name="et_hint">Enter Message</string>
+
+    <!-- Content Descriptions -->
+    <string name="Profiles">Profiles</string>
+    <string name="Game">Games View</string>
+    <string name="Conversations">Conversations</string>
+    <string name="icon">Icon</string>
+    <string name="achievements">Achievements</string>
+    <string name="Settings">Settings</string>
+
+    <!--    Action Bar Profile String-->
+    <string name="abp_area">Area</string>
+    <string name="abp_friends">Friends</string>
+    <string name="abp_party">Party</string>
+
+    <!-- Config message -->
+    <string name="ble_not_supported">BLE not supported</string>
+    <string name="ble_supported">BLE supported</string>
+
+    <!-- FRAGMENTS -->
+
+    <!-- Party List fragments -->
+    <string name="social_create_party">New Party</string>
+    <string name="social_see_invitations">See Invitations</string>
+    <string name="social_automatch">Automatch</string>
+
+    <string name="social_room">Room</string>
+    <string name="social_messages">Chat</string>
+    <string name="social_title_chat">Messages</string>
+    <string name="social_title_Participants">Participants</string>
+
+    <!--Store fragments -->
+    <string name="store_title">Store</string>
+
+    <!-- JoinPartyFragment -->
+    <string name="ignore">Ignore</string>
+
+    <!-- Scan Fragment -->
+    <string name="fragment_scan_section_title">Nearby</string>
+    <string name="scan_b_invite_party">Invite to Party</string>
+    <string name="scan_b_add_friend">Add a friend</string>
+
+    <!-- Add/invite fragment -->
+    <string name="et_add_friend_hint">Username</string>
+
+    <!-- ExpandableListView Entry -->
+    <string name="party_child_leave">Leave Party</string>
+    <string name="party_disband">Disband</string>
+    <string name="party_make_leader">Make Leader</string>
+
+    <!-- not available yet -->
+    <string name="dear_text">Welcome!\n</string>
+    <string name="sample_text">"Guillermo here! Thanks for downloading my app! I just finished my first game ever, Swifty Glider, with many more to come! Try it out and let me know what you think via my social media!\n\nHappy gaming!"</string>
+    <string name="bondfire_news">"For Bondfire updates click on these!"</string>
+    <string name="gorillamoa_news">"To see what i'm up to, follow me!"</string>
+
+    <!--Cloud fragment lables -->
+    <string name="label_store">Store</string>
+
+    <!-- Bird p s  -->
+    <string name="cannot_make_purchase">Cannot Make Purchase at this time</string>
+    <string name="purchase_success">Purchase Successful, Thank you</string>
+
+    <!--Game description Text -->
+    <string name="dialog_player_count">Player has invited you to join his party! </string>
+    <string name="dialog_button_play">Play</string>
+    <string name="dialog_button_cancel">Back</string>
+    <string name="dialog_leader">Leaderboard</string>
+    <string name="dialog_invite_accept">Join</string>
+    <string name="dialog_invite_decline">Decline</string>
+    <string name="dialog_invite_title">Party Invite</string>
+    <string name="dialog_close">Close</string>
+    <string name="dialog_title_credit">Credits</string>
+    <string name="dialog_title_license">Licenses</string>
+    <string name="dialog_credit_effects">Effects</string>
+    <string name="dialog_credit_design_and_dev">Design and Development</string>
+
+    <!-- Game Titles -->
+    <string name="game_1">Swifty Glider</string>
+
+    <!-- BSE GAME UTILS -->
+    <string name="gamehelper_sign_in_failed">Failed to sign in. Please check your network connection and try again.</string>
+    <string name="gamehelper_app_misconfigured">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
+    <string name="gamehelper_license_failed">License check failed.</string>
+    <string name="gamehelper_unknown_error">Unknown error.</string>
+
+    <string name="sign_in_failed">Failed to sign in. Please check your network connection and try again.</string>
+    <string name="app_misconfigured">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
+    <string name="license_failed">License check failed.</string>
+    <string name="unknown_error">Unknown error.</string>
+
+    <!-- turn based services -->
+    <string name="b_find_matches">"New Match"</string>
+    <string name="b_quick_match">"Quick Match"</string>
+    <string name="b_current_participants">"Participants"</string>
+    <string name="b_wins_heading">"Wins"</string>
+    <string name="b_current_matches">"Current Matches"</string>
+
+    <!-- room stuff -->
+    <string name="b_leave">Switch Rooms</string>
+    <string name="b_forfeit">Forfeit</string>
+
+    <!-- Preference -->
+    <string name="pref_cat_account">Account</string>
+    <string name="pref_button_log">Log in</string>
+    <string name="pref_account_key">loginKey</string>
+    <string name="pref_logout_text_1">Signed in via Google</string>
+    <string name="pref_logout_text_2">Log out</string>
+    <string name="pref_heading_account">Account</string>
+    <string name="pref_heading_other">Other</string>
+    <string name="pref_entry_about">About</string>
+
+    <!--About-->
+    <string name="about_version">Version 0.9.1</string>
+    <string name="about_copyright">© 2016 Guillermo Alvarez</string>
+    <string name="about_credits"><u>Credits</u></string>
+    <string name="about_rate"><u>Rate Application</u></string>
+    <string name="about_support"><u>Support</u></string>
+
+    <string name="about_licences"><u>Licenses</u></string>
+    <string name="about_terms"><u>Terms of Service</u></string>
+    <string name="about_policy"><u>Privacy Policy</u></string>
+
+    <!--Store Entries-->
+    <string name="store_section_general">General</string>
+    <string name="store_section_swiftyglider">Swifty Glider</string>
+    <string name="store_section_linespark">Line Spark</string>
+
+</resources>

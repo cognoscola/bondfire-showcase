@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <PreferenceCategory
+        android:title="@string/pref_cat_account">
+
+        <Preference
+            android:title="pref_button_log"
+            android:key="@string/pref_account_key"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>
+
+
+<!--<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >-->
+
+   <!-- <EditTextPreference
+        android:defaultValue=""
+        android:key="UNAME"
+        android:title="Username"
+        android:summary="Visible to everyone"/>
+
+    <EditTextPreference
+        android:defaultValue="192.168.10.107"
+        android:key="IP"
+        android:title="IP Address"
+        android:summary="eg. 192.168.0.0"/>
+
+    <EditTextPreference
+        android:defaultValue="3025"
+        android:key="TCP PORT"
+        android:title="TCP Port"
+        android:summary="TCP Port Number for sockets"/>
+
+    <EditTextPreference
+        android:defaultValue="8080"
+        android:key="HTTP PORT"
+        android:title="HTTP Port"
+        android:summary="Standard Server Port" />-->
+
+
+    <!-- Note Use PreferenceCategory to group prefences under specific titales -->
+    <!-- Note Use PreferenceScreen to place groups into a subscreen of its own -->
+    <!-- Note Use Intent inside a prefrenc-screen to open up a different non-preference item -->
+<!--
+
+</PreferenceScreen>-->

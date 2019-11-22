@@ -1,0 +1,33 @@
+
+linespark.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+color2
+  rotate: false
+  xy: 1, 27
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+splat
+  rotate: false
+  xy: 259, 27
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+eraser2
+  rotate: false
+  xy: 517, 27
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+picker_selection
+  rotate: false
+  xy: 1, 1
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Google Play game services IDs.
+Save this file as res/values/games-ids.xml in your project.
+-->
+<resources>
+
+    <string name="license">eepxmDE2l5LpBZLHSpYxuQ==:8UySQyGzN7jFwKOw/dxxsGQ1i2qKnagQ2eyK1oYvJ8A=:FAFtC5b96DxcpQhROu1AbS8oJJW42rusxWFJIxUwSfyBjsabkz54e/KqE0YXCu7V4loz9lyEmGL6dLuVlR1FOrhmAeGWG5C7BBinMakQ4uhA/FhSlrAhaRaETpSjQ27k/fTDXRWLqX+HmZcE7sCVEqza46W1nVaWhI8SOhkA8ks4GW0waECTka8Lo/dM9XRjAlNCiQwSkySDgYjZ7S0t74OgFI+olYvfbyLYOnqNFUgjI+IIqOzGWTKviztbv1895qjouLInhGdLBvs3TthMazcVhj6E2ZJSrvZWGO3fI0QxPDo1le3fzfiu8kjidgBskUrOETc/EKoqX9ZOvDoJsSaHT1olxSZB3j4TxBo+yBDQo2otCnOVtXVj8ejeWeNNCjpYM/EF/IKnxm2kUw54jCRLZi+eSDTc4UJ/aTSdriKDMejnu3ZD5pcFnBeNQLgzsO2R6e0vRMUjUvqk+iP6Fs/0pr4fn1Hjn75DSezIdYtxytwdl1cOmt0FnFtX85SZoIHpQrwCo+e2uZ3zLwAf/g==</string>
+
+    <string name="achievement_pro_glider">2S7lBLITPiUq+jMuHUZ45g==:PW0NLg7wqwjDbzI7X643cfTEIVogzJEFMBx/uIq85OQ=:JkmwRloQ9gU0qoTbEuAoCCaOvag7BULU+G6tbXtX7wM=</string>
+    <string name="achievement_sky_diver">TKYyvwTu3W7aCSigduKxTA==:MG+eFYPb5uV8Ws4wIQo+zr6oTXxSY9q0x4WBOdtPexk=:uLp3ef58QW2jyWtXHZNHMfxsVK5rZHWfCpjxREVGfm0=</string>
+    <string name="achievement_persistent_glider">Fxvepr67COj271gDIetplA==:lzg0O4N+c16g5rBg+fSfNwI8em70CdEXUDfHQA9/KHc=:2ERo4I66tMcwEmOUrDstdjqGdKqxQS1/QNbhXz8DES8=</string>
+    <string name="achievement_master_glider">zSBtlEFf+TMzA0KycolGhQ==:/L7rpRMYKlzWvXwMNmNuctBIomoYqRqNfdfk1t+c+qc=:5pOXd5djluCz8Bng8pHm5JVh/wN5D40cXioBiVZ09og=</string>
+    <string name="achievement_grand_master_glider">V0ZZ5YikaTxgDS0mJ2dZkA==:9D5toASsI/8Vh+u5OfXnoacfpizZspJuC4avNRp//5o=:yDI8riq0xY619SNpyYJyTODNPyOSyBEMYMfovTF+dr8=</string>
+    <string name="leaderboard_glider_scores">MKlHw+2evapjn00Q2p9MyA==:cGxSaS2GLyoKzcdcObWjTqul0o/Ne2JZ7v3lwH0qTGc=:SFio4dA4/1BQ3AzJFHqSsF3Xbwh3256eBhziF87udBI=</string>
+
+    <!--Testing version-->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <!--Release version-->
+    <!--<string name="banner_ad_unit_id">ca-app-pub-6074419812911246/5146849018</string>-->
+
+    <string name="app_id">442954540350</string>
+
+    <!-- events -->
+    <string name="event_client_launched_swifty_glider">vMB1BKuriObwOgmTXmklGQ==:UTEAXFqUx9FqnxF4L04nr4BZ6NpS1RWcD3yqK0rJqMU=:3Tjfgcc/bvADxsl2HgRgqXC6QtwBVKdOxU32Q+nSCBI=</string>
+    <string name="event_client_launched_line_spark">/7vG5wA+LC/lakNnD/ejXw==:rS3wdTTVBTqFFy+cVG7NGBHizfTCq7uLDQzGv05heQo=:Rhxx+TqzwzFbykuHhl4Y7Y99b6J/PTYFIs0O8ZruK+I=</string>
+    <string name="event_client_joined_room">qw127VIGGr13rbtwwixdWg==:GiCC2kK3BPEXJY2+qq4NnxZ0PwKFLgA2fWqypkPW9w4=:a1Q+OCtaYwyp5bg/BF3rz3E2p/9eIZyUxMhv7vs1w9I=</string>
+    <string name="event_client_received_game_invite_notification">RzyAapHsP0J/eyJZe1YviA==:xRUASZVAkWo3XD4b1R3UnzLNWJm4/1El/8dZ1q1nJz0=:Mm1ZXo6Nl0CJ9YsJ+ve0ZA8VJf00TsTqasNJDu2/jDs=</string>
+    <string name="event_client_received_game_invite_dialog">tu+Aw8F76fz0ZYwj7GnkVQ==:VHy5jaXe86xUW9v1O0cDjgYp0SuMLwKzhhjEG9ktlYc=:Rdn6HLXaXFgUmJZOGKWssHPool8RBfVsAspnovPyCZ8=</string>
+    <string name="event_client_automatched">xc/fCEpLNTkYJmwORimi9Q==:MkQQjBVrgSZ2rfE+AX/ojtdR73htMjO966kw2ThVspE=:ktvfmp26dLCPiRA6XHLAs9A3ZmcQUIHAvpZLKR7peM8=</string>
+    <string name="event_client_invited_people">fNcXBe9KNqfGXCnfSP8QoQ==:RLrc3hQXfMCzOrMaDuNEC74VbbGupTRZed/QskKum/M=:nPbbg2IV2D0lfE5zCwZRacVbbvNNOZJTmvBwjW6lNAQ=</string>
+    <string name="event_client_joined_a_room_of_2_participants">hmqNQzGM9PtrLP17+FTDlA==:fZI2qiMCkP/1Sjf4gqw/w8wJOJscs3ZiK8u3c54XSAI=:sQ8HbzB7RHG/XWtUyZ+GT7V9Ih5VGLjc/S9+daaeOsU=</string>
+    <string name="event_client_joined_a_room_of_3_participants">v7UQfKPWv+JtbzhoyQ1HxQ==:BM8z0khnpT+viTUt3kMgv2fEFKc1U2HXdyx6getSCgw=:dVz3VXFn5buc/fXpSVmLjn+6LcMgYNqw/hZ5k2m5pis=</string>
+    <string name="event_client_joined_a_room_of_4_participants">xnH+8CFULjseNf1oXCUnug==:Xw0YWaj7k6uX17DwBmsrPkuOAD/tWckgQFlxJwHmd9g=:SB7OxLM2duBfa0LQWrPkjp0Vz5I+W1yZeFPImBTvVww=</string>
+    <string name="event_client_joined_a_room_of_5_participants">SJtv6qIsM0D7IpuTVVglkA==:E7CGKiztEkz8a4WE12aLFazroIRglYqzznQggcDyEGs=:ZqDalgIZtyA/lLBGrMqw+f3GpuYkkt/8BSwCE9ghcME=</string>
+    <string name="event_client_joined_a_room_of_6_participants">SgF8a5rSiMYpJv2LUheFlQ==:nuuvVV6A7//KRmeg1A/pB9hQrU/6YizReuCmk5qY6Bk=:Vv+OuMamW85S/QHDGLkzpTyCxgz6J3wMOrbVFK57qQY=</string>
+    <string name="event_client_joined_a_room_of_7_participants">/9rs0my3naQ8bEnnm14fWg==:UmVba5KxM3SZqN15bAFiau5aD1YP5gm6GA6Wll/aIV4=:URvTGO0vI82sk1iTlaSONQlL8Nesa/kRepdYSfLR2wk=</string>
+    <string name="event_client_joined_a_room_of_8_participants">g9ZSsfHH3aoWruQ4O1baRQ==:tmBhTf6BKVLvRMCtHLgIhrWOeiTjtCR5khjDBORpC2k=:FFMWVuqC/tkS8+a4Tuknd8HS7r5QpmPDDbV6Sv5KR88=</string>
+    <string name="event_client_checked_invitations">MnxMVsM+iAWQkaV5Ec4OCA==:w+fiAsIJwmxgguV6J44xsWKlmLnb7yYLG+gbgDve1U0=:gmKQNL6OH6c3gRafnlIXupwgI1NC9rOhQDOtNBxCQ2o=</string>
+    <string name="event_user_left_room_from_the_notification">g8E6yqqc8RUEF7F2z7oVPw==:4sztfocXwLjMU9Ncp0Sc+pg43/0FS5Fu5oqvbqnRsqU=:hIz6f2WFTeCBfVk19g6gA1HUAM8sb1IEG28kM74Tjig=</string>
+    <string name="event_user_left_room_from_the_context_menu">9ytTuAlqiTOEgLuQNwgQrw==:f/pdorW5HYZxvvwDbxOVNndNgQVrTSflIXBTi1bIdF0=:hJp9evYbcvZinywSwOc/UaVgDSQ0aZQ/ZybulBRAmVc=</string>
+
+    <string name="pur_name">hzFQAG0R7VQoz1QaSvEbxA==:vUPpz7WeGWFqFZsJWFEArvjaWcJnY3ZazaG99tbCWgI=:0xvyzbKiFEUV7lGefoNnmr+pFS9T2UQuNvfllafULaM=</string>
+    <string name="pur_key">5a54/UgPJbccB2LdZckyQg==:xldrB7BVOyl2OsRnsQKeeILmThIpykbGtSUNbWkTKQc=:VLZ9bIP6Xy2Xg2l0HBoEXQ==</string>
+
+    <array name="events_swifty_glider">
+        <item name="event_swiftyglider_played_multiplayer_mode_speedy">huicQjSI0e8NfjQ8voJkZQ==:ZNX0DCbGHQ1w1Scb9v9OsRip9lLNwh4PAzgKqhshK/Q=:0rJXfHXkBbJ9pNYg6kp9NazpgZQFrk3TwNToYTNAt1g=</item>
+        <item name="event_swiftyglider_played_multiplayer_mode_windy">g6OaFl1rEMsgPs8sEtb8qA==:/7GhhZE1abDku6C18bN45gKnM9SEwbpb9Ld24C5SSkE=:i+q/g+v88JkuGGuwqPnKYjOCNfhBbgjwpI2+KEPOS8g=</item>
+        <item name="event_swiftyglider_played_multiplayer_mode_nerve_wracking">mZ2seYQQjWfASJ4ItWS1/Q==:LztXhwFlZyMeFxeC+5avw/7Rz34IZYlm2SQfe0UE9Zo=:VuEaHsqtPPIpxMQtwkkR7YIGDXNfsyaEScaXjmid1KQ=</item>
+        <item name="event_swiftyglider_played_multiplayer_mode_normal">lQOLyrtWiNZM/I1bEMDu4g==:xEbUyT38bdCxnopdw8bj3YdR6UL/UFvlzHzGOB2Ugvg=:8eYmmRaU7iqogiLPB2LYKhsvDiawzxgcQTAElaFV6eA=</item>
+        <item name="event_swiftyglider_played_single_level_1">AYZkb/mnIbLrWdVuiFpAqA==:Rm1XSDE3XNGW4HghvyG0AiWau8sWib1PCFTYoQBI8aw=:+6VLtkPP6eP+xwYvxoQbzklW68M2rvPlajQek0eUTCE=</item>
+        <item name="event_swiftyglider_played_single_level_2">Zzsa3UtCZM1NnLM3kF0ADA==:CtViLykwXnzyoz0OeSB1Qo4/vWSG4v4urH5cb0zMHRM=:PNbD21kZXW8IByfZ22xj8hRzFYpZ+9TaDjZ7T3BQIZ0=</item>
+        <item name="event_swiftyglider_played_single_level_3">AY403Q3SFA4a3OrU+MudsA==:v83DxlQztAeL/s10o86gXK1BKLsGhA1Nydw4pRW40BU=:W58i3yy7bIcYq4aiavrTOJGGFBemRYo7tlaerbBkxdw=</item>
+        <item name="event_swiftyglider_played_single_level_4">wDfP2yfivCCb6aNJuvpHLg==:abck9wagMiHbe+WL4Mhizwm2Y0IX1zErX2gtaocpCsY=:XtVpyhITO10GchlfOrVL0pkXibrdzDU64op+aX0quUE=</item>
+        <item name="event_swiftyglider_played_single_level_5">1Y7fTdivVt4lavY/lAMGHg==:b5JmStnwJw/3OOaG2FSG2Fe9n4i0JU/70if28LYR2Xg=:7Vupqjuglbhs1l+PoFWPfeIi2qpZ70YGUHMq8TdxgHk=</item>
+        <item name="event_swiftyglider_played_single_level_6">Hu+VzRW4Q+jEa58q3beApQ==:ilyb7sOWYLntILCQRGQZLufXPjL+spFByEOET0ByySk=:92/Mg2YBjDrouYOceoohHUX87wTxNFoWQrsKb/fCLmc=</item>
+        <item name="event_swiftyglider_played_single_level_7">kDXkE061D4Rt9G9TiFHUcQ==:8yjjTav3k7OsesyT9hIJ29oqyZlZhB07gx1/PB2/cWA=:KLVrbmfQzaKWYthXHLqxSzbDrVcg0Eb2YEaGVf44bBk=</item>
+    </array>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.bondfire.app.android.activity.MainActivity"
+    >
+
+    <item android:id="@+id/action_make_host" android:title="@string/action_make_host"
+        android:orderInCategory="100" android:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/action_invite_to_game"
+        android:title="@string/action_invite_to_game"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_join_game"
+        android:title="@string/action_join_game"
+        android:orderInCategory="100"
+        android:showAsAction="never"/>
+
+</menu>

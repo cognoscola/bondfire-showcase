@@ -1,0 +1,25 @@
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="48dip"
+    android:background="@drawable/tab_button"
+    android:id="@+id/b_sign_out"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pref_logout_text_1"
+            android:textColor="@color/text_shadow_white"
+            android:layout_gravity="left|center_vertical"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pref_logout_text_2"
+        android:layout_gravity="right|center_vertical"
+        android:textColor="@color/text_shadow_white"/>
+
+
+</FrameLayout>

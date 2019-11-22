@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.andexert.library.RippleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ripple_store_item"
+    android:layout_width="120dp"
+    android:layout_height="150dp"
+    android:minHeight="50dp"
+    android:background="@drawable/back"
+    android:layout_margin="6dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="50dp"
+        android:background="#33FFFFFF"
+        android:weightSum="100"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="0.0dp"
+            android:src="@drawable/store_premium_icon"
+            android:id="@+id/iv_store_item_picture"
+            android:layout_weight="70"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:id="@+id/tv_purchase_title"
+            android:textColor="@color/pure_white"
+            android:layout_weight="15"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dp"
+            android:textColor="@color/pure_white"
+            android:text="CA$2.00"
+            android:id="@+id/tv_price"
+            android:layout_weight="15"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+</com.andexert.library.RippleView>

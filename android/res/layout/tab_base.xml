@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <com.andexert.library.RippleView
+            android:id="@+id/leftRipple"
+            android:layout_width="0.0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/Profiles"
+            android:padding="10dp"
+            >
+
+            <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+                <ImageView
+                android:id="@+id/leftalert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="5dip"
+                android:paddingLeft="5dip"
+                android:src="@drawable/bf_alert_icon"
+                android:visibility="gone"/>
+
+                <ImageView
+                android:id="@+id/leftImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bf_chat_icon"
+                android:layout_gravity="center"
+                />
+             </FrameLayout>
+        </com.andexert.library.RippleView>
+
+        <View
+
+        android:background="#33ffffff"
+        android:layout_width="1.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip" />
+
+        <com.andexert.library.RippleView
+            android:id="@+id/middleRipple"
+            android:layout_width="0.0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:contentDescription="@string/Game"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/middleImage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/bf_game_icon"
+                />
+        </com.andexert.library.RippleView>
+
+        <View
+        android:background="#33ffffff"
+        android:layout_width="1.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip" />
+
+
+            <com.andexert.library.RippleView
+                android:id="@+id/rightRipple"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/Conversations"
+                android:padding="10dp"
+                >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/rightAlert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="5dip"
+                    android:paddingLeft="5dip"
+                    android:src="@drawable/bf_alert_icon"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/rightImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bf_bird_icon"
+                    android:layout_gravity="center"
+                    />
+
+                </FrameLayout>
+
+            </com.andexert.library.RippleView>
+    </LinearLayout>
+</merge>

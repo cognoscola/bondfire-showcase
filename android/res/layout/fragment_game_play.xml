@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"-->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="48dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#00000000"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/left_swipe_indicator"
+        android:id="@+id/iv_left_swipe_indicator"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:src="@drawable/exit_game"
+        android:id="@+id/b_exit"
+        android:visibility="gone"
+        />
+
+     <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/play"
+            android:id="@+id/b_pause"
+         android:visibility="gone"
+     />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:src="@drawable/leaderboard_icon"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:id="@+id/b_leaderboard" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/right_swipe_indicator"
+        android:id="@+id/iv_right_swipe_indicator"
+        android:layout_gravity="end"
+        android:visibility="gone"/>
+</FrameLayout>
+

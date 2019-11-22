@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dip"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="30dip">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/et_addusername"
+                android:hint="@string/et_add_friend_hint" />
+            <FrameLayout
+                android:layout_width="125dip"
+                android:layout_height="48dip"
+                android:background="@drawable/back"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tab_button"
+                    android:layout_gravity="center"
+                    android:id="@+id/b_add_or_invite_person"
+                    android:text=""
+                    android:textColor="@drawable/textColorWhite"/>
+            </FrameLayout>
+
+         <!--   <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_requestadd"
+                android:text="Add Friend"
+                android:layout_gravity="center" />-->
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR TAP PHONES"
+            android:layout_gravity="center"/>
+     </FrameLayout>
+
+</LinearLayout>
