@@ -3,7 +3,6 @@ package com.bondfire.app.client;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.bondfire.app.Main;
 
 public class HtmlLauncher extends GwtApplication {
 

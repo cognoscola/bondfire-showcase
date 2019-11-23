@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.MainActivity;
 import com.bondfire.app.android.activity.GamePlayServiceActivity;
 import com.bondfire.app.android.adapter.TurnBasedParticipantsAdapter;

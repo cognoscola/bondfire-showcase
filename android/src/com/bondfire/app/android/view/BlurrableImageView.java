@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import com.badlogic.gdx.graphics.Pixmap;
-import com.bondfire.app.Main;
 import com.bondfire.app.android.imports.stackblur.StackBlurManager;
 
 public class BlurrableImageView extends ImageView  {

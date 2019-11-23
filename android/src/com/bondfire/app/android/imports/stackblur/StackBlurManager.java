@@ -30,7 +30,6 @@ import android.graphics.Bitmap;
 //import android.support.v8.renderscript.RSRuntimeException;
 import android.util.Log;
 
-import com.bondfire.app.android.BuildConfig;
 
 import java.io.FileOutputStream;
 import java.util.concurrent.ExecutorService;

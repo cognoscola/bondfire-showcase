@@ -81,7 +81,7 @@ class MainViewPagerAdapter(internal var fm:
         if (d_showProfileFragment) Log.e(TAG, "ShowProfileFragment()")
         try {
             if (ParentFragmentAtPos0 != null)
-                fm.beginTransaction().remove(ParentFragmentAtPos0).commit()
+                fm.beginTransaction().remove(ParentFragmentAtPos0 as Fragment).commit()
             ParentFragmentAtPos0 = SocialMediaFragment.newInstance(null)
             notifyDataSetChanged()
         } catch (e: IllegalStateException) {
@@ -94,7 +94,7 @@ class MainViewPagerAdapter(internal var fm:
         try {
             isOutsideGame = true
             if (ParentFragmentAtPos1 != null)
-                fm.beginTransaction().remove(ParentFragmentAtPos1).commit()
+                fm.beginTransaction().remove(ParentFragmentAtPos1 as Fragment).commit()
             ParentFragmentAtPos1 = GameGridViewFragment.newInstance(0)
             notifyDataSetChanged()
         } catch (e: IllegalStateException) {
@@ -106,7 +106,7 @@ class MainViewPagerAdapter(internal var fm:
     fun showDefaultSocialFragment() {
         try {
             if (ParentFragmentAtPos2 != null)
-                fm.beginTransaction().remove(ParentFragmentAtPos2).commit()
+                fm.beginTransaction().remove(ParentFragmentAtPos2 as Fragment).commit()
             ParentFragmentAtPos2 = ConnectionsFragment.newInstance()
             notifyDataSetChanged()
         } catch (e: IllegalStateException) {
@@ -125,7 +125,7 @@ class MainViewPagerAdapter(internal var fm:
     }
 
     //DIFFERENT TRAVERSALS
-    override fun getItemPosition(`object`: Any?): Int {
+    override fun getItemPosition(`object`: Any): Int {
         if (d_getItemPosition) Log.e(TAG, "GetItemPosition" + "Enter")
 
 
@@ -217,7 +217,7 @@ class MainViewPagerAdapter(internal var fm:
             if (ParentFragmentAtPos1 !is GamePlayFragment) {
                 try {
                     if (ParentFragmentAtPos1 != null)
-                        fm.beginTransaction().remove(ParentFragmentAtPos1).commit()
+                        fm.beginTransaction().remove(ParentFragmentAtPos1 as Fragment).commit()
                     ParentFragmentAtPos1 = GamePlayFragment.newInstance(0, act.mGameManager!!, this, information)
                     act.mGameManager?.injectController(ParentFragmentAtPos1!!)
                 } catch (e: IllegalStateException) {
@@ -234,7 +234,7 @@ class MainViewPagerAdapter(internal var fm:
             if (ParentFragmentAtPos0 !is GameInstructionFragment) {
                 try {
                     if (ParentFragmentAtPos0 != null)
-                        fm.beginTransaction().remove(ParentFragmentAtPos0).commit()
+                        fm.beginTransaction().remove(ParentFragmentAtPos0 as Fragment).commit()
                     ParentFragmentAtPos0 = GameInstructionFragment.newInstance()
                 } catch (e: IllegalStateException) {
                     Log.e(TAG, "replaceGameFragmentWithPlay: Tried to switch to GameInstructionFragment", e)
@@ -249,7 +249,7 @@ class MainViewPagerAdapter(internal var fm:
 
                         if (d_replaceGameFragmentWithPlay) Log.e(TAG, "Swapped Bird Fragment")
                         if (ParentFragmentAtPos2 != null)
-                            fm.beginTransaction().remove(ParentFragmentAtPos2).commit()
+                            fm.beginTransaction().remove(ParentFragmentAtPos2 as Fragment).commit()
                         ParentFragmentAtPos2 = TurnBasedFragment.newInstance(2, information)
                     } catch (e: IllegalStateException) {
                         Log.e(TAG, "replaceGameFragmentWithPlay: tried to switch to TurnBasedFragment", e)
@@ -257,9 +257,10 @@ class MainViewPagerAdapter(internal var fm:
 
                 }
             } else if (information.usesRealTimeMultiplayerServices) {
-                if (ParentFragmentAtPos2 !is RealTimeRoomFragment) {
 
-                }
+                    if (ParentFragmentAtPos2!! !is RealTimeRoomFragment) {
+
+                    }
             }
 
             notifyDataSetChanged()
@@ -278,7 +279,7 @@ class MainViewPagerAdapter(internal var fm:
 
         try {
             if (ParentFragmentAtPos2 != null)
-                fm.beginTransaction().remove(ParentFragmentAtPos2).commit()
+                fm.beginTransaction().remove(ParentFragmentAtPos2 as Fragment).commit()
             ParentFragmentAtPos2 = TurnBasedFragment.newInstance(2, act?.mGameManager!!.information)
             notifyDataSetChanged()
         } catch (e: IllegalStateException) {
@@ -292,7 +293,7 @@ class MainViewPagerAdapter(internal var fm:
 
         try {
             if (ParentFragmentAtPos2 != null)
-                fm.beginTransaction().remove(ParentFragmentAtPos2).commit()
+                fm.beginTransaction().remove(ParentFragmentAtPos2 as Fragment).commit()
             ParentFragmentAtPos2 = TurnBasedRoomFragment.newInstance(2)
             notifyDataSetChanged()
         } catch (e: IllegalStateException) {
@@ -305,7 +306,7 @@ class MainViewPagerAdapter(internal var fm:
         if (d_showRealTimeRoom) Log.i(TAG, "showRealTimeRoom() ")
         try {
             if (ParentFragmentAtPos2 != null)
-                fm.beginTransaction().remove(ParentFragmentAtPos2).commit()
+                fm.beginTransaction().remove(ParentFragmentAtPos2 as Fragment).commit()
             ParentFragmentAtPos2 = RealTimeRoomFragment.newInstance(2)
             notifyDataSetChanged()
         } catch (e: IllegalStateException) {

@@ -1,7 +1,7 @@
 package com.bondfire.app.android.data;
 
 import android.content.Context;
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.GamePlayServiceActivity;
 
 public class PlayServicesIdStore {

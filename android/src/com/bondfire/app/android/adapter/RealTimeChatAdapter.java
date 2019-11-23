@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 
 /**
  * Created by alvaregd on 18/02/16.

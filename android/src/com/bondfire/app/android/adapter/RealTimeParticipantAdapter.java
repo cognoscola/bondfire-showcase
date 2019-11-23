@@ -12,7 +12,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.MainActivity;
 import com.bondfire.app.android.fragment.GameGridViewFragment;
 import com.bondfire.app.android.network.realtime.BondfireMessage;

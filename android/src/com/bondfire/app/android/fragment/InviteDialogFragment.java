@@ -3,15 +3,16 @@ package com.bondfire.app.android.fragment;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
-import androidx.core.app.DialogFragment;
-import androidx.core.app.Fragment;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.google.android.gms.games.multiplayer.Invitation;
 
 import java.lang.reflect.Field;
@@ -51,7 +52,7 @@ public class InviteDialogFragment extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setStyle(androidx.core.app.DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Holo_Light_Dialog);
+        setStyle(DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Holo_Light_Dialog);
     }
 
     @Nullable

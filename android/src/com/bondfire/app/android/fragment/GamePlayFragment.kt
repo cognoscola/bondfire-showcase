@@ -17,7 +17,7 @@ import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import com.bondfire.app.Main
 
-import com.bondfire.app.android.R
+import com.bondfire.app.R
 import com.bondfire.app.android.activity.MainActivity
 import com.bondfire.app.android.activity.GamePlayServiceActivity
 import com.bondfire.app.android.data.GameInformation
@@ -107,7 +107,7 @@ class GamePlayFragment : BaseFragment(), View.OnClickListener {
         return null
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         if (rootView == null) {
             rootView = inflater!!.inflate(R.layout.fragment_game_play, container, false)
         }

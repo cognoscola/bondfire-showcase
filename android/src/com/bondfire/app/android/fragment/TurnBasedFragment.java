@@ -11,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.GamePlayServiceActivity;
 import com.bondfire.app.android.adapter.TurnBasedMatchesAdapter;
 import com.bondfire.app.android.data.GameInformation;

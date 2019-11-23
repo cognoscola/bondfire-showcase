@@ -1,5 +1,7 @@
 package com.bondfire.app.android.fragment;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -63,6 +65,8 @@ public class LibgdxContainerFragment
     }
     private GameInformation gameInfo;
 
+    private Activity activity;
+
     public LibgdxContainerFragment() {
     }
 
@@ -74,10 +78,21 @@ public class LibgdxContainerFragment
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.activity = activity;
+    }
+
+    @Override
+    public void startActivity(Intent intent) {
         createServices();
         createGame();
+    }
+
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
         if(rootView == null) GenerateBrokenGameScreen();
         return rootView;
     }
@@ -93,10 +108,12 @@ public class LibgdxContainerFragment
         if(controller != null){
             if(controller.isShowing()){
                 controller.setTempVisibility(false);
-                ((MainActivity)getActivity()).getmAdview().destroy();
+                ((MainActivity)activity).getmAdview().destroy();
             }
         }
     }
+
+
 
     @Override
     public void onResume() {
@@ -107,7 +124,7 @@ public class LibgdxContainerFragment
             if(controller != null){
                 if(controller.isShowing()){
                     controller.setTempVisibility(true);
-                    ((MainActivity)getActivity()).getmAdview().loadAd(new AdRequest.Builder().build());
+                    ((MainActivity)activity).getmAdview().loadAd(new AdRequest.Builder().build());
                 }
             }
         } catch (NullPointerException e) {
@@ -123,21 +140,21 @@ public class LibgdxContainerFragment
 
             if (d_createServices) Log.e(TAG, "Uses Leader Board");
             playServicesObject = new PlayServicesObject(
-                    PlayServicesIdStore.getLeaderBoards(gameInfo.gameId, getActivity()),
-                    PlayServicesIdStore.getAchievements(gameInfo.gameId, getActivity()),
-                    PlayServicesIdStore.getEvents(gameInfo.gameId, getActivity()),
+                    PlayServicesIdStore.getLeaderBoards(gameInfo.gameId, activity),
+                    PlayServicesIdStore.getAchievements(gameInfo.gameId, activity),
+                    PlayServicesIdStore.getEvents(gameInfo.gameId, activity),
                     new PlayServicesListener() {
                         @Override
                         public void Unlock(final String id) {
-                            (getActivity()).runOnUiThread(new Runnable() {
+                            (activity).runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    if (((GamePlayServiceActivity) getActivity()).getSignedInGPGS()) {
-                                        ((GamePlayServiceActivity) getActivity()).unlockAchievementGPGS(id);
+                                    if (((GamePlayServiceActivity) activity).getSignedInGPGS()) {
+                                        ((GamePlayServiceActivity) activity).unlockAchievementGPGS(id);
                                     } else {
-                                        Toast.makeText(getActivity(), "Achievement Unlocked", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(activity, "Achievement Unlocked", Toast.LENGTH_SHORT).show();
                                         /** save the progress locally */
-                                        AchievementStore.updateLocally(getActivity(), 0, id);
+                                        AchievementStore.updateLocally(activity, 0, id);
                                     }
                                 }
                             });
@@ -145,11 +162,11 @@ public class LibgdxContainerFragment
 
                         @Override
                         public void SetScore(final String[] leaderBoard, final int score) {
-                            getActivity().runOnUiThread(new Runnable() {
+                            activity.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    if (((GamePlayServiceActivity) getActivity()).getSignedInGPGS()) {
-                                        ((GamePlayServiceActivity) getActivity()).submitScoreGPGS(leaderBoard[0], score);
+                                    if (((GamePlayServiceActivity) activity).getSignedInGPGS()) {
+                                        ((GamePlayServiceActivity) activity).submitScoreGPGS(leaderBoard[0], score);
                                     }
                                 }
                             });
@@ -158,7 +175,7 @@ public class LibgdxContainerFragment
                         @Override
                         public void submitEvent(String eventId, int incrementAmount) {
 //                            if(d_submitEvent) Log.i(TAG, "submitEvent() " + eventId + " " +incrementAmount);
-                            ((GamePlayServiceActivity)getActivity()).submitEvent(eventId, incrementAmount);
+                            ((GamePlayServiceActivity)activity).submitEvent(eventId, incrementAmount);
                         }
                     });
         }
@@ -170,11 +187,11 @@ public class LibgdxContainerFragment
                 @Override
                 public void setAdVisibility(final boolean visibility) {
                     try{
-                        getActivity().runOnUiThread(new Runnable() {
+                        activity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 try {
-                                    ((MainActivity) getActivity()).getmAdview().setVisibility(visibility ? View.VISIBLE : View.INVISIBLE);
+                                    ((MainActivity) activity).getmAdview().setVisibility(visibility ? View.VISIBLE : View.INVISIBLE);
                                 } catch (NullPointerException e) {
                                     Log.e(TAG, "run: tried to use the adview",e );
                                 }
@@ -189,12 +206,12 @@ public class LibgdxContainerFragment
                 @Override
                 public void newRequest() {
                     try {
-                        getActivity().runOnUiThread(new Runnable() {
+                        activity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                ((MainActivity)getActivity()).getmAdview().destroy();
+                                ((MainActivity)activity).getmAdview().destroy();
                                 AdRequest adRequest = new AdRequest.Builder().build();
-                                ((MainActivity)getActivity()).getmAdview().loadAd(adRequest);
+                                ((MainActivity)activity).getmAdview().loadAd(adRequest);
                             }
                         });
                     } catch (NullPointerException e) {
@@ -207,13 +224,13 @@ public class LibgdxContainerFragment
         if(gameInfo.usesTurnBasedMultiplayerService){
             if(d_createServices)Log.e(TAG," Uses TBMP");
             turnBasedMultiplayerService =
-                    new TurnBasedMultiplayerService(((GamePlayServiceActivity)getActivity()).getNetworkManager().getTurnManager().generateListener());
+                    new TurnBasedMultiplayerService(((GamePlayServiceActivity)activity).getNetworkManager().getTurnManager().generateListener());
         }
 
         if (gameInfo.usesRealTimeMultiplayerServices) {
             if(d_createServices) Log.i(TAG, "createServices() Uses RTMP");
             realTimeMultiplayerService = RealTimeMultiplayerService.newInstance();
-            realTimeMultiplayerService.setSender(((GamePlayServiceActivity)getActivity())
+            realTimeMultiplayerService.setSender(((GamePlayServiceActivity)activity)
                     .getNetworkManager().getRealTimeManager());
         }
 
@@ -221,14 +238,12 @@ public class LibgdxContainerFragment
             if(d_createServices)Log.e(TAG,"USes Timer");
             cal = Calendar.getInstance();
         }
-
-
     }
 
     //If the game doesn't launch correctly, display a screen which shows that the
     //game wasn't able to launch correclty
     private void GenerateBrokenGameScreen(){
-        LinearLayout parent = new LinearLayout(getActivity());
+        LinearLayout parent = new LinearLayout(activity);
         parent.setBackground(new ColorDrawable(Color.parseColor("#FF0000")));
         rootView = parent;
     }
@@ -269,7 +284,7 @@ public class LibgdxContainerFragment
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        ((MainActivity) getActivity()).setPageView(2);
+                                        ((MainActivity) activity).setPageView(2);
                                     }
                                 });
                             }
@@ -280,10 +295,10 @@ public class LibgdxContainerFragment
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        GameInstructionFragment instructionFragment = ((MainActivity) getActivity()).getmSectionsPagerAdapter().getInstructionsFragment();
+                                        GameInstructionFragment instructionFragment = ((MainActivity) activity).getmSectionsPagerAdapter().getInstructionsFragment();
                                         instructionFragment.setInformation(title, content);
                                         if (show) {
-                                            ((MainActivity) getActivity()).setPageView(0);
+                                            ((MainActivity) activity).setPageView(0);
                                         }
                                     }
                                 });
@@ -315,19 +330,25 @@ public class LibgdxContainerFragment
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+                Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
             }
         });
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDetach() {
+        super.onDetach();
         turnBasedMultiplayerService = null;
         realTimeMultiplayerService = null;
         controller = null;
         playServicesObject = null;
     }
+
+
+    /*public void onDestroy() {
+
+
+    }*/
 
 
     @Override
@@ -360,7 +381,7 @@ public class LibgdxContainerFragment
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                ((MainActivity) getActivity()).setPageView(2);
+                ((MainActivity) activity).setPageView(2);
             }
         });
     }
@@ -370,10 +391,10 @@ public class LibgdxContainerFragment
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                GameInstructionFragment instructionFragment = ((MainActivity) getActivity()).getmSectionsPagerAdapter().getInstructionsFragment();
+                GameInstructionFragment instructionFragment = ((MainActivity) activity).getmSectionsPagerAdapter().getInstructionsFragment();
                 instructionFragment.setInformation(title,content);
                 if (show) {
-                    ((MainActivity) getActivity()).setPageView(0);
+                    ((MainActivity) activity).setPageView(0);
                 }
             }
         });
@@ -400,7 +421,7 @@ public class LibgdxContainerFragment
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
             }
         });
 
@@ -411,7 +432,7 @@ public class LibgdxContainerFragment
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
             }
         });
     }

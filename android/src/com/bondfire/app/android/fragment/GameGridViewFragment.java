@@ -4,8 +4,9 @@ import android.content.Context;
 import android.graphics.Point;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -16,7 +17,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.GamePlayServiceActivity;
 import com.bondfire.app.android.activity.MainActivity;
 import com.bondfire.app.android.adapter.GridViewAdapter;
@@ -24,7 +25,7 @@ import com.bondfire.app.android.data.GameInformation;
 import com.bondfire.app.android.data.GameInformationCollection;
 import com.bondfire.app.android.interfaces.GmGameStateListener;
 
-public class GameGridViewFragment extends Fragment  {
+public class GameGridViewFragment extends Fragment {
 
     private final static String Tag = "GameViewFragment ";
     private final static boolean d_onCreateView = false;

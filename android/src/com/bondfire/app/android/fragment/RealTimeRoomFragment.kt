@@ -2,7 +2,7 @@ package com.bondfire.app.android.fragment
 
 import android.content.res.Resources
 import android.os.Bundle
-import androidx.core.app.Fragment
+
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,9 +10,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 
 import com.andexert.library.RippleView
-import com.bondfire.app.android.R
+import com.bondfire.app.R
 import com.bondfire.app.android.activity.GamePlayServiceActivity
 import com.bondfire.app.android.adapter.RealTimeChatAdapter
 import com.bondfire.app.android.adapter.RealTimeParticipantAdapter
@@ -55,7 +56,7 @@ class RealTimeRoomFragment : Fragment() {
         super.onResume()
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // return super.onCreateView(inflater, container, savedInstanceState);
         if (rootView == null) {
             rootView = inflater!!.inflate(R.layout.fragment_real_time_room, container, false)
@@ -119,7 +120,9 @@ class RealTimeRoomFragment : Fragment() {
 
         realTimeManager!!.updateRoomFragment(null)
         return rootView
+
     }
+
 
     private fun showParticipantControls() {
         //set the visibility of the controls

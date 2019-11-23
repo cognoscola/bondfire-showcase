@@ -2,7 +2,9 @@ package com.bondfire.app.android.fragment;
 
 
 import android.os.Bundle;
-import androidx.core.app.ListFragment;
+
+
+import androidx.fragment.app.ListFragment;
 
 import com.bondfire.app.android.interfaces.ScanFragmentActionListener;
 
