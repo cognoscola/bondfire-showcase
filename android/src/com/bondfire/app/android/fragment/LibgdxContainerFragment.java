@@ -34,7 +34,7 @@ import com.bondfire.app.services.TurnBasedMultiplayerService;
 import com.bondfire.dex.Dex;
 import com.bondfire.linespark.LineSpark;
 import com.bondfire.swiftyglider.SwiftyGlider;
-import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdRequest;
 
 import java.util.Calendar;
 
@@ -108,7 +108,8 @@ public class LibgdxContainerFragment
         if(controller != null){
             if(controller.isShowing()){
                 controller.setTempVisibility(false);
-                ((MainActivity)activity).getmAdview().destroy();
+                //Disable Ads
+                /*((MainActivity)activity).getmAdview().destroy();*/
             }
         }
     }
@@ -124,7 +125,8 @@ public class LibgdxContainerFragment
             if(controller != null){
                 if(controller.isShowing()){
                     controller.setTempVisibility(true);
-                    ((MainActivity)activity).getmAdview().loadAd(new AdRequest.Builder().build());
+                    //TODO remove ads
+//                    ((MainActivity)activity).getmAdview().loadAd(new AdRequest.Builder().build());
                 }
             }
         } catch (NullPointerException e) {
@@ -191,7 +193,7 @@ public class LibgdxContainerFragment
                             @Override
                             public void run() {
                                 try {
-                                    ((MainActivity) activity).getmAdview().setVisibility(visibility ? View.VISIBLE : View.INVISIBLE);
+//                                    ((MainActivity) activity).getmAdview().setVisibility(visibility ? View.VISIBLE : View.INVISIBLE);
                                 } catch (NullPointerException e) {
                                     Log.e(TAG, "run: tried to use the adview",e );
                                 }
@@ -209,9 +211,9 @@ public class LibgdxContainerFragment
                         activity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                ((MainActivity)activity).getmAdview().destroy();
-                                AdRequest adRequest = new AdRequest.Builder().build();
-                                ((MainActivity)activity).getmAdview().loadAd(adRequest);
+//                                ((MainActivity)activity).getmAdview().destroy();
+//                                AdRequest adRequest = new AdRequest.Builder().build();
+//                                ((MainActivity)activity).getmAdview().loadAd(adRequest);
                             }
                         });
                     } catch (NullPointerException e) {

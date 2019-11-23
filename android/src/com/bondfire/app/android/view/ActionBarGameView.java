@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 
 public class ActionBarGameView extends FrameLayout{
 

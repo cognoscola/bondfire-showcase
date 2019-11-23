@@ -22,7 +22,7 @@ package com.bondfire.app.android.utils.billing;
  * call {@link #getResult()}.
  */
 public class IabException extends Exception {
-    IabResult mResult;
+   /* IabResult mResult;
 
     public IabException(IabResult r) {
         this(r, null);
@@ -38,6 +38,6 @@ public class IabException extends Exception {
         this(new IabResult(response, message), cause);
     }
 
-    /** Returns the IAB result (error) that this exception signals. */
-    public IabResult getResult() { return mResult; }
+    *//** Returns the IAB result (error) that this exception signals. *//*
+    public IabResult getResult() { return mResult; }*/
 }

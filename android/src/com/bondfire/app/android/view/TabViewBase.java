@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TabHost;
 
 import com.andexert.library.RippleView;
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.MainActivity;
 
 

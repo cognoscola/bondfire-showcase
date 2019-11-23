@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 
 
 public class ActionBarSocialView extends FrameLayout{

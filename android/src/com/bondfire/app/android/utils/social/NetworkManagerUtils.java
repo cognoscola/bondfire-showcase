@@ -6,7 +6,7 @@ import android.app.Dialog;
 import android.content.IntentSender;
 import android.util.Log;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;

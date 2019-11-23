@@ -63,6 +63,8 @@ public class GamePlayServiceActivity extends BaseActivity implements NetworkMana
 
 
     // Listener that's called when we finish querying the items and subscriptions we own
+    //TODO Disabled BILLING
+/*
     IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
         public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
             Log.d(TAG, "Query inventory finished.");
@@ -78,20 +80,25 @@ public class GamePlayServiceActivity extends BaseActivity implements NetworkMana
 
             Log.d(TAG, "Query inventory was successful.");
 
-            /*
+            */
+/*
              * Check for items we own. Notice that for each purchase, we check
              * the developer payload to see if it's correct! See
              * verifyDeveloperPayload().
-             */
+             *//*
+
             // Do we have the premium upgrade?
             Purchase premiumPurchase = inventory.getPurchase(SKU_PAID_VERSION);
             purchaseData.isPaidVersion = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
             Log.d(TAG, "User is " + (purchaseData.isPaidVersion ? "PAID VERSION" : "FREE VERSION"));
         }
     };
+*/
 
 
     // Callback for when a purchase is finished
+    //TODO disabled Billing
+/*
     IabHelper.OnIabPurchaseFinishedListener mPurchaseFinishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
         public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
             Log.d(TAG, "Purchase finished: " + result + ", purchase: " + purchase);
@@ -122,6 +129,7 @@ public class GamePlayServiceActivity extends BaseActivity implements NetworkMana
             }
         }
     };
+*/
 
     private boolean verifyDeveloperPayload(Purchase purchase) {
         String payload = purchase.getDeveloperPayload();
@@ -168,7 +176,8 @@ public class GamePlayServiceActivity extends BaseActivity implements NetworkMana
             Log.e(TAG, "onCreate: Security Exception", e);
         }
 
-        if(!loadPurchaseData())purchaseData = new PurchaseData();
+        //TODO disabled billing
+/*        if(!loadPurchaseData())purchaseData = new PurchaseData();
 
         billingHelper = new IabHelper(this, decryptResource(R.string.license));
         billingHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
@@ -188,7 +197,7 @@ public class GamePlayServiceActivity extends BaseActivity implements NetworkMana
                 additionalSkuList.add(SKU_PAID_VERSION);
                 billingHelper.queryInventoryAsync(true, additionalSkuList, mGotInventoryListener);
             }
-        });
+        });*/
     }
 
     protected void configureNetwork(){
@@ -228,9 +237,10 @@ public class GamePlayServiceActivity extends BaseActivity implements NetworkMana
     protected void onDestroy() {
         super.onDestroy();
 
-        if (billingHelper != null) {
+        //TODO disabled BILLING
+        /*if (billingHelper != null) {
             billingHelper.dispose();
-        }
+        }*/
         billingHelper = null;
         keys = null;
     }
@@ -517,9 +527,11 @@ public class GamePlayServiceActivity extends BaseActivity implements NetworkMana
         /* TODO: for security, generate your payload here for verification. See the comments on
          *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
          *        an empty string, but on a production app you should carefully generate this. */
-        String payload = "";
+
+        //TODO DISABLED
+        /*String payload = "";
         billingHelper.launchPurchaseFlow(this, SKU, RC_REQUEST,
-                mPurchaseFinishedListener, payload);
+                mPurchaseFinishedListener, payload);*/
     }
 
     public boolean savePurchaseData() {

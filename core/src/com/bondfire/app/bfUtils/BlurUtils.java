@@ -411,8 +411,8 @@ public class BlurUtils {
         int width = pixmap.getWidth() / 2;
         int height = pixmap.getHeight() / 2;
         level = 1;
-        Pixmap.Blending blending = Pixmap.getBlending();
-        Pixmap.setBlending(Pixmap.Blending.None);
+        Pixmap.Blending blending = origPixmap.getBlending();
+        origPixmap.setBlending(Pixmap.Blending.None);
         // for each mipmap level > 0 ...
         while (width > 0 && height > 0) {
             // apply blur
@@ -438,7 +438,7 @@ public class BlurUtils {
             // each level.
 //			 radius++;
         }
-        Pixmap.setBlending(blending);
+        origPixmap.setBlending(blending);
 
         if (disposePixmap) {
             origPixmap.dispose();

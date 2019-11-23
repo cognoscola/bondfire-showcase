@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.badlogic.gdx.Gdx;
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.MainActivity;
 import com.bondfire.app.android.adapter.TurnBasedMatchesAdapter;
 import com.bondfire.app.android.adapter.TurnBasedParticipantsAdapter;

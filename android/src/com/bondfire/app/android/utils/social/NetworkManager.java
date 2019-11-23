@@ -14,10 +14,6 @@
  * limitations under the License.
  */
 
-
-
-//
-
 package com.bondfire.app.android.utils.social;
 
 import java.util.ArrayList;
@@ -34,9 +30,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import androidx.core.app.FragmentActivity;
-import androidx.core.app.FragmentTransaction;
+
 import android.util.Log;
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.bondfire.app.android.activity.MainActivity;
 import com.bondfire.app.android.fragment.InviteDialogFragment;
@@ -44,7 +42,7 @@ import com.bondfire.app.android.network.realtime.BondfireMessage;
 import com.bondfire.app.android.network.realtime.RealTimeManager;
 import com.bondfire.app.android.network.turnbasedmultiplayer.TurnBasedMultiplayerManager;
 import com.bondfire.app.android.services.NetworkService;
-import com.google.android.gms.appstate.AppStateManager;
+//import com.google.android.gms.appstate.AppStateManager;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -56,7 +54,7 @@ import com.google.android.gms.games.multiplayer.Invitation;
 import com.google.android.gms.games.multiplayer.Multiplayer;
 import com.google.android.gms.games.multiplayer.OnInvitationReceivedListener;
 import com.google.android.gms.games.multiplayer.turnbased.TurnBasedMatch;
-import com.google.android.gms.games.request.GameRequest;
+//import com.google.android.gms.games.request.GameRequest;
 import com.google.android.gms.plus.Plus;
 
 public class NetworkManager implements
@@ -170,7 +168,8 @@ public class NetworkManager implements
      * If we have incoming requests when we connected to the games client, they
      * are here. Otherwise, it's null.
      */
-    ArrayList<GameRequest> mRequests;
+    //TODO fix this
+//    ArrayList<GameRequest> mRequests;
 
     // Listener
     GoogleSignInListener mListener = null;
@@ -385,8 +384,9 @@ public class NetworkManager implements
         }
 
         if (0 != (mRequestedClients & CLIENT_APPSTATE)) {
-            builder.addApi(AppStateManager.API);
-            builder.addScope(AppStateManager.SCOPE_APP_STATE);
+            //TODO FIX ME
+            /*builder.addApi(AppStateManager.API);
+            builder.addScope(AppStateManager.SCOPE_APP_STATE);*/
         }
 
         if (0 != (mRequestedClients & CLIENT_SNAPSHOT)) {
@@ -783,7 +783,7 @@ public class NetworkManager implements
             //No check if we are coming from matches
             else{
 
-                // Do we have any requests pending?
+                /*// Do we have any requests pending?
                 mRequests = Games.Requests.getGameRequestsFromBundle(connectionHint);
                 if (!mRequests.isEmpty()) {
                     // We have requests in onConnected's connectionHint.
@@ -794,7 +794,7 @@ public class NetworkManager implements
                 if(d_onConnected) Log.i(TAG, "onConnected() connection hint provided. Checking for TBMP game.");
                 Log.e(TAG,"got Match onConnect");
                 mTurnManager.updateMatchFromOnConnect( (TurnBasedMatch)connectionHint
-                        .getParcelable(Multiplayer.EXTRA_TURN_BASED_MATCH));
+                        .getParcelable(Multiplayer.EXTRA_TURN_BASED_MATCH));*/
             }
 
         }

@@ -21,8 +21,8 @@ import com.bondfire.app.android.view.ActionBarSocialView
 import com.bondfire.app.android.view.ActionBarGameView
 import com.bondfire.app.android.view.ActionBarProfileView
 import com.bondfire.app.android.view.TabViewBase
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
+//import com.google.android.gms.ads.AdRequest
+//import com.google.android.gms.ads.AdView
 import com.google.android.gms.games.GamesActivityResultCodes
 import kotlinx.android.synthetic.main.action_bar.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,7 +34,7 @@ class MainActivity : GamePlayServiceActivity(), ChildFragmentListener {
     internal lateinit var mActionBarProfileView: ActionBarProfileView
     internal lateinit var mActionBarGameView: ActionBarGameView
     internal lateinit var mActionBarSocialView: ActionBarSocialView
-    private var mAdview: AdView? = null
+//    private var mAdview: AdView? = null
 
     //helps control behaviour of app when pressing back button
     var isChildFragment: Boolean = false
@@ -81,7 +81,7 @@ class MainActivity : GamePlayServiceActivity(), ChildFragmentListener {
     override fun onResume() {
         super.onResume()
         if (d_onResume) Log.e(TAG, "onResume()")
-        mAdview!!.resume()
+//        mAdview!!.resume()
     }
 
     override fun onPause() {
@@ -312,7 +312,7 @@ class MainActivity : GamePlayServiceActivity(), ChildFragmentListener {
         lockableViewPager?.visibility = View.INVISIBLE
         activityTabRoot?.visibility = View.INVISIBLE
         actionBarView!!.visibility = View.INVISIBLE
-        mAdview!!.visibility = View.INVISIBLE
+//        mAdview!!.visibility = View.INVISIBLE
     }
 
 
@@ -370,9 +370,11 @@ class MainActivity : GamePlayServiceActivity(), ChildFragmentListener {
             }
             networkManager.handleRealTimeReceiveInviteInboxResult(data)
             actionBarView.showProgressBar()
-        } else if (billingHelper.handleActivityResult(requestCode, resultCode, data)) {
+        }
+        //TODO DISABLED BILLING
+        /*else if (billingHelper.handleActivityResult(requestCode, resultCode, data)) {
             Log.d(TAG, "onActivityResult handled by IABUtil.")
-        } else if (resultCode == GamesActivityResultCodes.RESULT_RECONNECT_REQUIRED && requestCode == LEADERBOARD_CODE) {
+        }*/ else if (resultCode == GamesActivityResultCodes.RESULT_RECONNECT_REQUIRED && requestCode == LEADERBOARD_CODE) {
             networkManager.disconnect()
         } else {
             networkManager.handleApiConnectivity(requestCode, resultCode, data)
@@ -497,9 +499,9 @@ class MainActivity : GamePlayServiceActivity(), ChildFragmentListener {
         }
     }
 
-    fun getmAdview(): AdView {
-        return mAdview!!
-    }
+    /*fun getmAdview(): AdView {
+//        return mAdview!!
+    }*/
 
     fun getmSectionsPagerAdapter(): MainViewPagerAdapter {
         return mSectionsPagerAdapter!!

@@ -8,13 +8,15 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.core.app.FragmentTransaction;
+
 import androidx.core.app.NotificationCompat;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.GamePlayServiceActivity;
 import com.bondfire.app.android.activity.MainActivity;
 import com.bondfire.app.android.adapter.RealTimeChatAdapter;

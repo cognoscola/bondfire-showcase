@@ -19,8 +19,10 @@ package com.bondfire.app.android.utils.social;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.core.app.FragmentActivity;
+
 import android.util.Log;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 

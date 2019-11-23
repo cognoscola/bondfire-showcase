@@ -1,11 +1,12 @@
 package com.bondfire.app.android.managers
 
 import android.content.Context
-import androidx.core.app.Fragment
-import androidx.core.app.FragmentActivity
-import android.util.Log
 
-import com.badlogic.gdx.backends.android.AndroidFragmentApplication
+import android.util.Log
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+
+import com.badlogic.gdx.backends.android.AndroidXFragmentApplication
 import com.bondfire.app.android.activity.MainActivity
 import com.bondfire.app.android.data.GameInformation
 import com.bondfire.app.android.network.realtime.BondfireMessage
@@ -33,7 +34,7 @@ class GameManager(internal var context: Context, private val containerId: Int, A
 
     internal var mState = GameState.Stopped
     var controllFragment: Fragment? = null
-    internal var mContainer: AndroidFragmentApplication? = null
+    internal var mContainer: AndroidXFragmentApplication? = null
     internal var mPlayServicesObject: PlayServicesObject? = null
     internal var controller: AdController? = null
     var information: GameInformation? = null
@@ -46,7 +47,7 @@ class GameManager(internal var context: Context, private val containerId: Int, A
         if (!AutoStartGame) {
             mContainer = BackgroundFragment.newInstance()
             val trans = (context as FragmentActivity).supportFragmentManager.beginTransaction()
-            trans.replace(containerId, mContainer)
+            trans.replace(containerId, mContainer!!)
             trans.commit()
         }
     }
@@ -85,7 +86,7 @@ class GameManager(internal var context: Context, private val containerId: Int, A
         mContainer?.onResume()
         mContainer = LibgdxContainerFragment.newInstance(information)
         val trans = (context as FragmentActivity).supportFragmentManager.beginTransaction()
-        trans.replace(containerId, mContainer)
+        trans.replace(containerId, mContainer!!)
         trans.commit()
         mState = GameState.Running
         (context as MainActivity).networkManager.realTimeManager.broadcastClientStatus(BondfireMessage.STATUS_GAME)
@@ -142,7 +143,7 @@ class GameManager(internal var context: Context, private val containerId: Int, A
                 mContainer!!.onResume()
                 mContainer = BackgroundFragment.newInstance()
                 val trans = (context as FragmentActivity).supportFragmentManager.beginTransaction()
-                trans.replace(containerId, mContainer)
+                trans.replace(containerId, mContainer!!)
                 trans.commit()
                 mState = GameState.Stopped
                 controllFragment = null

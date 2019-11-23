@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.bondfire.app.android.R;
+import com.bondfire.app.R;
 import com.bondfire.app.android.activity.MainActivity;
 import com.bondfire.app.android.interfaces.IActionBarListener;
 
