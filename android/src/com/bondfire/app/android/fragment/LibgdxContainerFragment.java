@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.backends.android.AndroidFragmentApplication;
+import com.badlogic.gdx.backends.android.AndroidXFragmentApplication;
 import com.bondfire.app.Main;
 import com.bondfire.app.android.activity.MainActivity;
 import com.bondfire.app.android.activity.GamePlayServiceActivity;
@@ -39,7 +39,7 @@ import com.google.android.gms.ads.AdRequest;
 import java.util.Calendar;
 
 public class LibgdxContainerFragment
-        extends AndroidFragmentApplication
+        extends AndroidXFragmentApplication
         implements PlatformInterfaceController,
         BondfireGraphicsModifier {
 

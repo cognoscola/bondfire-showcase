@@ -7,32 +7,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.badlogic.gdx.backends.android.AndroidFragmentApplication
+import com.badlogic.gdx.backends.android.AndroidXFragmentApplication
 import com.bondfire.app.Main
 import com.bondfire.app.bfUtils.BondfireGraphicsModifier
 
 
-class BackgroundFragment : AndroidFragmentApplication(), BondfireGraphicsModifier {
+class BackgroundFragment : AndroidXFragmentApplication(), BondfireGraphicsModifier {
 
 
     internal var rootView: View? = null
     internal var main: Main? = null
 
-
     override fun startActivity(intent: Intent?) {
 
-
-    }
-
-    override fun onAttach(activity: Activity?) {
-        super.onAttach(activity)
     }
 
 
-
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         if (rootView == null) {
             main = Main()
             rootView = initializeForView(main)
